@@ -1,4 +1,4 @@
-# SSU OpenBook
+# OpenBook
 
 An open-source book swapping/sharing network -- for students, by students!
 
