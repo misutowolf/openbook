@@ -1,26 +1,24 @@
-<template name="bookBrowse">
+<template name="browseClass">
 	<div class="col-lg-12">
-		{{#if books}}
-			<h3>Books for {{class}}</h3>
+		{{#if booksFound}}
+			<h3>Found {{ numBooks }} Books for {{class}}</h3>
 			<table class="table table-hover table-browse">
 				<tr>
-					<td>ID#</td>
-					<td>ISBN#</td>
 					<td>Title</td>
+					<td>ISBN#</td>
 					<td>Owner</td>
 					<td>Posted</td>
 				</tr>
 			{{#each books}}
 				<tr>
-					<td>{{ _id }}</td>
-					<td>{{ isbn }}</td>
 					<td>{{ title }}</td>
+					<td>{{ isbn }}</td>
 					<td>{{ theOwner }}</td>
 					<td>{{ createdAt }}</td>
 				</tr>
 			{{/each}}
 			</table>
-		{{#else}}
+		{{else}}
 			<h3>No books found for {{class}}</h3>
 		{{/if}}
 	</div>

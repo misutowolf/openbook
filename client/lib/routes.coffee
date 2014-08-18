@@ -51,10 +51,14 @@ Router.map ->
 
 
 	### BROWSE ROUTES (Class only) ###
-	@route 'book-browse',
-		path: '/browse/:class?'
+	@route 'browse-all',
+		path: '/browse'
+
+	@route 'browse-class',
+		path: '/browse/:class'
 		data: ->
 			class: @params.class
+			numBooks: Books.find({"class": @params.class},{sort:{"createdAt": 1}}).count()
 			books: Books.find({"class": @params.class},{sort:{"createdAt": 1}})
 
 
