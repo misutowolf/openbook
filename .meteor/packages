@@ -15,5 +15,6 @@ spin
 accounts-entry
 bootstrap-3
 jquery
-moment-timezone
 font-awesome
+moment
+moment-timezone

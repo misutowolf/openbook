@@ -11,7 +11,6 @@
         "git": "https://github.com/misutowolf/accounts-entry.git",
         "branch": "master"
       },
-      "moment-timezone": {},
       "font-awesome": {}
     },
     "packages": {
@@ -45,11 +44,6 @@
         "branch": "master",
         "commit": "dcb870dd0e979f8c68c8380699dedfb0db91e57d"
       },
-      "moment-timezone": {
-        "git": "https://github.com/acreeger/meteor-moment-timezone",
-        "tag": "v0.0.1.4",
-        "commit": "feb364efb1ec0cefb870d5981b2b836b45211455"
-      },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.1.0",
@@ -69,11 +63,6 @@
         "git": "https://github.com/Differential/simple-form.git",
         "tag": "v0.1.8",
         "commit": "1ea0d3621b333e6f24f37e0e93efd3c081068716"
-      },
-      "moment": {
-        "git": "https://github.com/acreeger/meteor-moment.git",
-        "tag": "v2.8.1",
-        "commit": "722ea63783d594341023836b7d418ab2567dab8c"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

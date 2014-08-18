@@ -1,0 +1,21 @@
+<template name="bookBrowse">
+	<div class="col-lg-12">
+		<h3>Books for {{class}}</h3>
+		<table class="table table-striped">
+			<tr>
+				<td>ID#</td>
+				<td>ISBN#</td>
+				<td>Title</td>
+				<td>Owner</td>
+			</tr>
+		{{#each books}}
+			<tr>
+				<td>{{ _id }}</td>
+				<td>{{ isbn }}</td>
+				<td>{{ title }}</td>
+				<td>{{ owner }}</td>
+			</tr>
+		{{/each}}
+		</table>
+	</div>
+</template>

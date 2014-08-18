@@ -72,4 +72,6 @@ Meteor.startup ->
 
 		"book-insert": (book) ->
 
+			Books.insert book
+			console.log "Insert the following into the Books collection:"
 			console.log JSON.stringify book

@@ -8,7 +8,6 @@
     "accounts-entry": {
       "git": "https://github.com/misutowolf/accounts-entry.git"
     },
-    "moment-timezone": {},
     "font-awesome": {}
   }
 }

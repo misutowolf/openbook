@@ -51,9 +51,10 @@ Router.map ->
 
 
 	### BROWSE ROUTES (Class only) ###
-	@route 'browse',
-		path: '/browse/:class'
+	@route 'book-browse',
+		path: '/browse/:class?'
 		data: ->
+			class: @params.class
 			books: Books.find({"class": @params.class},{sort:{"createdAt": 1}})
 
 
