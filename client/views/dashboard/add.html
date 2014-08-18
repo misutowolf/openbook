@@ -1,0 +1,134 @@
+<template name="dashboardAdd">
+
+	<div class="col-lg-6">
+
+		<h3>List a Book</h3>
+
+		<div class="well">
+			Instructions will go here.  Allow toggling, perhaps?  Or maybe in
+			a separate window or something.<br /><br />
+			All visible fields are <b>required</b>.
+		</div>
+
+		<form role="form" name="addForm">
+
+			<div class="form-group">
+				<label class="radio-inline">
+					<input type="radio" name="type" class="type" value="0"> Give
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="type" class="type" value="1"> Lend
+				</label>
+				<label class="radio-inline">
+					<input type="radio" name="type" class="type" value="2"> Trade
+				</label>
+			</div>
+
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-12">
+						<label for="isbn">ISBN# (10 or 13):</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-9">
+						<input type="text" class="form-control" id="isbn" placeholder="0000000000" />
+					</div>
+					<div class="col-md-3">
+		    			<button id="isbn-btn" class="btn btn-default form-isbn" type="button">Check ISBN</button>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="row">
+					<div class="col-md-12">
+						<label for="title">Book Title:</label>
+						<input type="text" class="form-control" id="title" placeholder="Name of Book" value="{{#with bookTitle}}{{ title }}{{/with}}" />
+					</div>
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-4">
+					<label for="classprefix">Prefix:</label>
+					<select id="prefix" class="form-control">
+					{{#each prefixDropdown}}
+						<option value="{{this.prefix}}">{{this.prefix}}</option>
+					{{/each}}
+					</select>
+				</div>
+				<div class="col-md-4">
+					<label for="number">Class Number:</label>
+					<input type="text" class="form-control" id="number" placeholder="1000" />
+				</div>
+				<div class="col-md-4">
+					<label for="condition">Condition: <span class="form-help">(<a href="">?</a>)</span></label>
+					<select id="condition" class="form-control">
+						<option value="0">Like New</option>
+						<option value="1">Very Good</option>
+						<option value="2">Good</option>
+						<option value="3">Acceptable</option>
+					</select>
+				</div>
+			</div>
+
+			<div class="traderequest">
+				<div class="well">
+					<h3>Trade Request:</h3>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-12">
+								<label for="isbn">ISBN# (10 or 13):</label>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-9">
+								<input type="text" class="form-control" id="trade-isbn" placeholder="0000000000" />
+							</div>
+							<div class="col-md-3">
+								<button id="trade-isbn-btn" class="btn btn-default form-isbn" type="button">Check ISBN</button>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-12">
+								<label for="bookTitle">Book Title:</label>
+								<input type="text" class="form-control" id="trade-title" placeholder="Name of Book" value="{{#with bookTitle}}{{ title }}{{/with}}" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row btn-add">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="form-group">
+						<input type="submit" class="btn btn-primary btn-block" value="List Your Book" />
+					</div>
+				</div>
+			</div>
+
+		</form>
+
+
+
+	</div>
+
+	<div class="col-lg-6 amazon-col">
+	{{#with amazonResponse}}
+		<div class="amazon-img">
+			<img src="{{this.img}}" /><br />
+		</div>
+		<ul class="amazon-list">
+			<li><span class="amazon-attrib">ISBN</span>: {{this.isbn}}</li>
+			<li><span class="amazon-attrib">Title</span>: {{this.title}}</li>
+			<li><span class="amazon-attrib">Author</span>: {{this.author}}</li>
+			<li><span class="amazon-attrib">Pages</span>: {{this.pages}}</li>
+			<li><span class="amazon-attrib">Publisher</span>: {{this.publisher}}</li>
+			<li><span class="amazon-attrib">Publication Date</span>: {{this.pubdate}}</li>
+		</ul>
+	{{/with}}
+	</div>
+
+</template>

@@ -1,0 +1,32 @@
+<template name="bookConfirm">
+	<div class="col-lg-12">
+		<h2>Book Confirmation</h2>
+		<div class="well">
+			The following data is what you entered on the previous form.  Please
+			verify it is correct before finalizing the data and adding it to the
+			listing database.  If this is not correct, please return to the form
+			and re-enter the correct data.
+		</div>
+
+		{{#with tempBook}}
+		<h3>Your Book:</h3>
+		<ul>
+				<li><b>ISBN#:</b> {{ isbn }}</li>
+				<li><b>Title:</b> {{ title }}</li>
+				<li><b>Class:</b> {{ class }}</li>
+				<li><b>Listing Type:</b> {{ listingType }}</li>
+				<li><b>Condition:</b> {{ bookCondition }}</li>
+		</ul>
+			{{#if tradeFor }}
+				<h3>Trade Request:</h3>
+				<ul>
+					<li><b>ISBN#:</b> {{ tradeFor.isbn }}</li>
+					<li><b>Title:</b> {{ tradeFor.title }}</li>
+				</ul>
+			{{/if}}
+		{{/with}}
+
+		<button type="button" class="btn btn-default" id="btn-confirm">Confirm Listing</button>
+
+	</div>
+</template>

@@ -1,0 +1,14 @@
+{
+  "packages": {
+    "spin": {},
+    "iron-router": {},
+    "npm": {},
+    "accounts-ui-bootstrap-3-blaze": {},
+    "bootstrap-3": {},
+    "accounts-entry": {
+      "git": "https://github.com/misutowolf/accounts-entry.git"
+    },
+    "moment-timezone": {},
+    "font-awesome": {}
+  }
+}

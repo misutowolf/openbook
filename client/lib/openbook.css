@@ -1,0 +1,50 @@
+.site-content {
+    margin-top: 70px;
+}
+
+.add-form {
+    padding-top: 10px;
+}
+
+.amazon-col {
+    padding-top: 20px;
+}
+
+.amazon-img {
+    width: 100%;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.amazon-img img {
+    border: 1px solid black;
+}
+
+.amazon-list {
+    list-style-type: none;
+}
+
+.amazon-attrib {
+    font-weight: bold
+}
+
+.form-help {
+    font-size: small;
+}
+
+.traderequest h3 {
+    margin-top: 0;
+    padding-bottom: 10px;
+}
+
+.traderequest {
+    margin-top: 20px;
+}
+
+.btn-add {
+    padding-top: 20px;
+}
+
+#btn-confirm {
+    margin-top: 15px;
+}

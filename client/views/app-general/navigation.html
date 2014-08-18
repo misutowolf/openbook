@@ -1,0 +1,16 @@
+<template name="navigation">
+
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa fa-book"></i>&nbsp;&nbsp;OpenBook</a>
+            <div class="navbar-right navbar-text">
+            {{#if currentUser}}
+                Signed in as <a href="/dashboard">{{currentUser.username}}</a> | (<a href="/sign-out">Sign Out</a>)
+            {{else}}
+                <a href="/sign-up">Register</a> | <a href="/sign-in">Login</a>
+            {{/if}}
+            </div>
+        </div>
+    </nav>
+
+</template>
