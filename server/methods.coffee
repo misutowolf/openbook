@@ -72,6 +72,19 @@ Meteor.startup ->
 
 		"book-insert": (book) ->
 
+			# Insert book, and make adjustments to counting collection.
+			theClass = book.class
+			console.log "Book class: " + theClass
 			Books.insert book
+
+
 			console.log "Insert the following into the Books collection:"
 			console.log JSON.stringify book
+
+			console.log "Aggregation test"
+			db = MongoInternals.defaultRemoteCollectionDriver().db
+			col = db.collection('Books')
+			aggregateSync = Meteor._wrapAsync(col.aggregate.bind(col))
+			pipeline = [{},{$group: {_id: '$class', count:{$sum: 1}}},{ $sort : { class : 1 } }]
+			theList = aggregateSync(pipeline)
+			console.log theList
