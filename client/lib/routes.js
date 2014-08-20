@@ -63,11 +63,7 @@ Router.map(function() {
 		path: '/browse/:_class',
 		data: {
 			theClass: function() { return this.params._class; },
-			numBooks: function() { 
-				var numBooks = Books.find({"class": this.params._class},{sort:{"createdAt": 1}}).count();
-				console.log(numBooks);
-				return numBooks;
-			},
+			numBooks: function() { return Books.find({"class": this.params._class},{sort:{"createdAt": 1}}).count(); },
 			books: function() { return Books.find({"class": this.params._class},{sort:{"createdAt": 1}}); }
 		}
 	});
