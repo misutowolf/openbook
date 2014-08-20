@@ -1,12 +1,7 @@
-Template.browseClass.rendered = function() {
-	console.log(this.data);
-	console.log(this.data.numBooks);
-};
-
 Template.browseClass.helpers({
 
 	booksFound: function() {
-		return this.data.numBooks > 0;
+		return this.numBooks > 0;
 	},
 
 	theOwner: function() {

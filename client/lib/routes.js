@@ -59,12 +59,15 @@ Router.map(function() {
 		path: '/browse'
 	});
 
-	this.route('browse-class', {
-		path: '/browse/:_class',
-		data: {
-			theClass: function() { return this.params._class; },
-			numBooks: function() { return Books.find({"class": this.params._class},{sort:{"createdAt": 1}}).count(); },
-			books: function() { return Books.find({"class": this.params._class},{sort:{"createdAt": 1}}); }
+	this.route('browseClass', {
+		path: '/browse/:class',
+		data: function() {
+			var booksCursor = Books.find({"class": this.params.class},{sort:{"createdAt": 1}});
+			return {
+				theClass: this.params.class,
+				numBooks: booksCursor.count(),
+				books: booksCursor
+			};
 		}
 	});
 

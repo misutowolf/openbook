@@ -79,8 +79,23 @@ Meteor.startup(function() {
 
 			// Insert book into collection, and then deal with counting
 			theClass = book.class;
-			console.log("Book Class: " + theClass)
+			console.log("Book Class: " + theClass);
 			Books.insert(book);
+		},
+
+		classCount: function() {
+
+			// Attempt aggregation of the books table to count by class, maybe.
+			var db = MongoInternals.defaultRemoteCollectionDriver().mongo.db;
+			var col = db.collection("books");
+			var aggregateSync = Meteor._wrapAsync(col.aggregate.bind(col));
+			var pipeline = [
+				{$group: {_id: "$class", count: {$sum: 1}}},
+				{$sort: {_id: 1}}
+			];
+			var theAnswer = aggregateSync(pipeline);
+			return theAnswer;
+
 		}
 
 	});

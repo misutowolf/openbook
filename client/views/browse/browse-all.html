@@ -1,6 +1,8 @@
 <template name="browseAll">
 	<h3>List of classes with books available!</h3>
 	<ul>
-		{{ classList }}
+		{{#each aggCount}}
+			<li><a href="{{ pathFor "browseClass"  _id}}">{{ _id }}</a> ({{ count }})</li>
+		{{/each}}
 	</ul>
 </template>
