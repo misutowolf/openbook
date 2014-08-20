@@ -1,6 +1,6 @@
-Meteor.startup ->
+Meteor.startup (function() {
 
-	if Prefixes.find().count() is 0
+	if (Prefixes.find().count() == 0) {
 
 		prefixes = [
 			{
@@ -223,10 +223,16 @@ Meteor.startup ->
 				"prefix": "UNIV"
 			},
 
-		]
+		];
 
-		Prefixes.insert prefix for prefix in prefixes
+		// Insert array into prefixes collection as documents.
+		for (prefix in prefixes) {
+			Prefixes.insert(prefix);
+		}
 
-		pNum = Prefixes.find().count()
+		// Show output in console.
+		pNum = Prefixes.find().count();
+		console.log(pNum + " prefixes now exist in the database!");
+	}
 
-		console.log pNum + "prefixes now exist in the database!"
+});

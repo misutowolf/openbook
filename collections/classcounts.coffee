@@ -1,1 +1,0 @@
-@ClassCounts = new Meteor.Collection 'classcounts'
