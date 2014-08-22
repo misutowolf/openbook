@@ -48,3 +48,12 @@
 #btn-confirm {
     margin-top: 15px;
 }
+
+.profile-title {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.edit-directions {
+    font-weight: bold;
+}

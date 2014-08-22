@@ -48,8 +48,8 @@ Router.map(function() {
 	// this.route('dashboard-messages',
 
 	// Edit user profile
-	this.route('dashboard-profile', {
-		path: '/dashboard/profile',
+	this.route('edit-profile', {
+		path: '/dashboard/editprofile',
 		data: function() { return Meteor.user(); }
 	});
 

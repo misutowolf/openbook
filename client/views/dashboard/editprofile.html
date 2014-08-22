@@ -1,0 +1,104 @@
+<template name="editProfile">
+	<div class="col-lg-12">
+		<h3 class="profile-title">User Profile Editor</h3>
+		<div class="col-lg-8 col-lg-offset-2">
+			<div class="well">
+				<p class="edit-directions">Directions:</p>
+				<p>
+					Fill out the following fields to edit your user profile.<br />
+					Any omitted fields will be ignored, so no worries there.<br />
+					Any entered address will not be displayed on your page, and will
+					only be used for geolocation code (distance between users) and
+					that is all.
+				</p>
+			</div>
+
+			<form class="form-horizontal" role="form">
+				
+				<!-- Username (Unchangable) -->
+				<div class="form-group">
+    				<label for="disabledUsername" class="col-sm-2 control-label input-sm">Username:</label>
+    				<div class="col-sm-10">
+    					<p class="form-control-static">{{ username }}</p>
+    				</div>
+  				</div>
+
+  				<!-- Real Name -->
+  				<div class="form-group">
+  					<label for="realName" class="col-sm-2 control-label input-sm">Real Name:</label>
+  					<div class="col-sm-10">
+  						<input type="text" class="form-control input-sm" id="realName" value="{{ profile.realName }}">
+  					</div>
+  				</div>
+
+  				<!-- Gender -->
+  				<div class="form-group">
+  					<label for="gender" class="col-sm-2 control-label input-sm">Gender:</label>
+  					<div class="col-sm-10">
+  						<label class="radio input-sm">
+  							<input type="radio" name="gender" id="gender" value="option1"> Male
+						</label>
+						<label class="radio input-sm">
+					  		<input type="radio" name="gender" id="gender" value="option2"> Female
+						</label>
+  					</div>
+				</div>
+
+				<!-- Major -->
+				<div class="form-group">
+					<label for="major" class="col-sm-2 control-label input-sm">Major:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control input-sm" id="major" value="{{ profile.major }}">
+					</div>
+				</div>
+
+				<!-- Address -->
+				<div class="well">
+
+				<div class="form-group">
+					<label for="major" class="col-sm-2 control-label input-sm">Address 1:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control input-sm" id="major" value="{{ profile.major }}">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="major" class="col-sm-2 control-label input-sm">Address 2:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control input-sm" id="major" value="{{ profile.major }}">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="major" class="col-sm-2 control-label input-sm">City:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control input-sm" id="major" value="{{ profile.major }}">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="major" class="col-sm-2 control-label input-sm">State:</label>
+					<div class="col-sm-10">
+						<select class="form-control" id="state">
+							{{#each ddStates}}
+								<option>{{ this }}</option>
+							{{/each}}
+						</select>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="major" class="col-sm-2 control-label input-sm">Zip:</label>
+					<div class="col-sm-10">
+						<input type="text" class="form-control input-sm" id="major" value="{{ profile.major }}">
+					</div>
+				</div>
+
+				</div>
+
+
+			</form>
+
+		</div>
+	</div>
+</template>
