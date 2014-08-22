@@ -56,15 +56,15 @@ Router.map(function() {
 
 	// BROWSE ROUTES (Class only)
 	this.route('browse-all', {
-		path: '/browse'
+		path: '/classes'
 	});
 
 	this.route('browseClass', {
-		path: '/class/:class',
+		path: '/classes/:_id',
 		data: function() {
-			var booksCursor = Books.find({"class": this.params.class},{sort:{"createdAt": 1}});
+			var booksCursor = Books.find({"class": this.params._id},{sort:{"createdAt": 1}});
 			return {
-				theClass: this.params.class,
+				theClass: this.params._id,
 				numBooks: booksCursor.count(),
 				books: booksCursor
 			};

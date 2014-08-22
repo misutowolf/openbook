@@ -1,7 +1,7 @@
 Template.bookConfirm.helpers({
 
 	tempBook: function() {
-		Session.get("tempBook");
+		return Session.get("tempBook");
 	},
 
 	listingType: function() {

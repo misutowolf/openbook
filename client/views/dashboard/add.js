@@ -88,7 +88,7 @@ Template.dashboardAdd.events({
 
 		// Construct object using above data
 		book = {
-			owner: Meteor.user().id,
+			owner: Meteor.userId(),
 			isbn: theISBN,
 			title: theTitle,
 			type: theType,

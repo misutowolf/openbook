@@ -57,3 +57,20 @@
 .edit-directions {
     font-weight: bold;
 }
+
+.edit-section {
+    padding-top: 35px;
+}
+
+.book-header {
+    text-decoration: underline;
+    text-align: center;
+}
+
+.available-yes {
+    color: green;
+}
+
+.available-no {
+    color: red;
+}

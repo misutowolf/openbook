@@ -1,0 +1,30 @@
+<template name="book">
+	<div class="col-lg-12">
+		
+		<h3 class="book-header">Book Details</h3>
+		
+		<div class="row">
+
+			<!-- Book Info -->
+			<div class="col-lg-6">
+				<ul>
+					<li>ISBN: {{ isbn }}</li>
+					<li>Title: {{ title }}</li>
+					<li>Class: {{ class }}</li>
+					<li>Condition: {{ theCondition }}</li>
+				</ul>
+			</div>
+
+			<!-- Owner + Availibility -->
+			<div class="col-lg-6">
+				<ul>
+					<li>Owner: {{ theOwner }}</li>
+					<li>Intention: {{ theType }}</li>
+					<li>Available: <span class="available-{{ availability }}">{{ availability }}</span></li>
+				</ul>
+			</div>
+
+		</div>
+
+	</div>
+</template>
