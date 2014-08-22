@@ -60,7 +60,7 @@ Router.map(function() {
 	});
 
 	this.route('browseClass', {
-		path: '/browse/:class',
+		path: '/class/:class',
 		data: function() {
 			var booksCursor = Books.find({"class": this.params.class},{sort:{"createdAt": 1}});
 			return {
@@ -80,8 +80,15 @@ Router.map(function() {
 
 	// PROFILE VIEW
 	this.route('profile', {
-		path: '/profile/:_username',
-		data: function() { return Meteor.users.find({username: this.params._username}); }
-	})
+		path: '/profile/:username',
+		data: function() { 
+			var userCursor = Meteor.users.findOne({username: this.params.username});
+			var bookCursor = Books.find({owner: userCursor._id});
+			return {
+				theUser: userCursor,
+				theBooks: bookCursor
+			};
+		}
+	});
 
 });
