@@ -62,8 +62,12 @@
     padding-top: 35px;
 }
 
-.book-header {
+.page-title {
     text-decoration: underline;
+    text-align: center;
+}
+
+.center-title {
     text-align: center;
 }
 
@@ -73,4 +77,17 @@
 
 .available-no {
     color: red;
+}
+
+.dash-body {
+    padding-top: 20px;
+}
+
+.table-header {
+    font-weight: bold;
+    border-bottom: 1px solid black;
+}
+
+.delete-cell {
+    text-align: right;
 }

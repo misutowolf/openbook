@@ -1,7 +1,52 @@
 <template name="dashboard">
 
 	<div class="col-lg-12">
-		<h3>{{ currentUser.username }}'s Dashboard</h3>
+		<h3 class="page-header">{{ currentUser.username }}'s Dashboard</h3>
+
+		<!-- Two columns -->
+		<div class="row dash-body">
+
+			<!-- Listed books -->
+			<div class="col-md-6">
+				<h4 class="center-title">Listed Books</h4>
+				<div class="well">
+					{{#if haveBooks}}
+						<table class="table">
+							<tr class="table-header">
+								<td>Title</td>
+								<td>Intention</td>
+								<td>Posted</td>
+								<td></td>
+							</tr>
+							{{#each theBooks}}
+								<tr>
+									<td>{{ title }}</td>
+									<td>{{ theType }}</td>
+									<td>{{ this.getDate }}</td>
+									<td class="delete-cell"><i class="fa fa-check"></i> <i class="fa fa-ban"></i></td>
+								</tr>
+							{{/each}}
+						</table>
+					{{else}}
+						You have no books listed!
+					{{/if}}
+				</div>
+			</div>
+
+			<!-- Requested books -->
+			<div class="col-md-6">
+				<h4 class="center-title">Requested Books</h4>
+				<div class="well">
+					{{#if haveRequests}}
+						Book table goes here
+					{{else}}
+						You have requested no books!
+					{{/if}}
+				</div>
+			</div>
+
+		</div>
+
 	</div>
 
 </template>

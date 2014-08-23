@@ -8,6 +8,7 @@
     "accounts-entry": {
       "git": "https://github.com/misutowolf/accounts-entry.git"
     },
-    "font-awesome": {}
+    "font-awesome": {},
+    "collection-helpers": {}
   }
 }

@@ -11,7 +11,8 @@
         "git": "https://github.com/misutowolf/accounts-entry.git",
         "branch": "master"
       },
-      "font-awesome": {}
+      "font-awesome": {},
+      "collection-helpers": {}
     },
     "packages": {
       "spin": {
@@ -48,6 +49,11 @@
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
         "tag": "v4.1.0",
         "commit": "ce6b1e92715d1938babc5d69c655c17e387f5926"
+      },
+      "collection-helpers": {
+        "git": "https://github.com/dburles/meteor-collection-helpers.git",
+        "tag": "v0.3.1",
+        "commit": "eff6c859cd91eae324f6c99ab755992d0f271d91"
       },
       "iron-layout": {
         "git": "https://github.com/EventedMind/iron-layout.git",

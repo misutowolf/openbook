@@ -20,7 +20,15 @@ Router.map(function() {
 
 	// Dashboard front page
 	this.route('dashboard', {
-		path: '/dashboard'
+		path: '/dashboard',
+		data: function() {
+			reqCursor = Requests.find({owner: Meteor.userId()});
+			bookCursor = Books.find({owner: Meteor.userId()});
+			return {
+				theBooks: bookCursor,
+				theRequests: reqCursor
+			};
+		}
 	});
 
 	// Add a book
