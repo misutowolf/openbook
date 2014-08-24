@@ -16,6 +16,11 @@ Template.dashboard.helpers({
 
 	theType: function() {
 		return INTENTIONS[this.condition];
+	},
+
+	bookRequests: function() {
+		reqCursor = Requests.find({book: this._id});
+		return reqCursor.count() > 0;
 	}
 
 });

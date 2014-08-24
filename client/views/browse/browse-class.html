@@ -11,10 +11,10 @@
 				</tr>
 			{{#each books}}
 				<tr>
-					<td>{{ title }}</td>
+					<td><a href="{{ pathFor "book"}}">{{ title }}</a></td>
 					<td>{{ isbn }}</td>
 					<td>{{ theOwner }}</td>
-					<td>{{ createdAt }}</td>
+					<td>{{ this.getDate }}</td>
 				</tr>
 			{{/each}}
 			</table>

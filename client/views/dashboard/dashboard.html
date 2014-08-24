@@ -23,7 +23,7 @@
 									<td>{{ title }}</td>
 									<td>{{ theType }}</td>
 									<td>{{ this.getDate }}</td>
-									<td class="delete-cell"><i class="fa fa-check"></i> <i class="fa fa-ban"></i></td>
+									<td class="delete-cell">{{#if bookRequests}}<i class="fa fa-check finalize-icon"></i>{{/if}} <i class="fa fa-ban"></i></td>
 								</tr>
 							{{/each}}
 						</table>
