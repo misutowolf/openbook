@@ -7,7 +7,7 @@
 		<div class="row dash-body">
 
 			<!-- Listed books -->
-			<div class="col-md-6">
+			<div class="col-md-8">
 				<h4 class="center-title">Listed Books</h4>
 				<div class="well">
 					{{#if haveBooks}}
@@ -20,10 +20,15 @@
 							</tr>
 							{{#each theBooks}}
 								<tr>
-									<td>{{ title }}</td>
+									<td><a href="{{ pathFor "book" }}">{{ title }}</a></td>
 									<td>{{ theType }}</td>
 									<td>{{ this.getDate }}</td>
-									<td class="delete-cell">{{#if bookRequests}}<i class="fa fa-check finalize-icon"></i>{{/if}} <i class="fa fa-ban"></i></td>
+									<td class="delete-cell">
+										{{#if bookRequests}}
+											<a href=""><i class="fa fa-check"></i></a>
+										{{/if}} 
+										<a href=""><i class="fa fa-ban"></i></a>
+									</td>
 								</tr>
 							{{/each}}
 						</table>
@@ -34,7 +39,7 @@
 			</div>
 
 			<!-- Requested books -->
-			<div class="col-md-6">
+			<div class="col-md-4">
 				<h4 class="center-title">Requested Books</h4>
 				<div class="well">
 					{{#if haveRequests}}

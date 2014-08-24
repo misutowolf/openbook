@@ -221,13 +221,13 @@ Meteor.startup (function() {
 			},
 			{
 				"prefix": "UNIV"
-			},
-
+			}
 		];
 
 		// Insert array into prefixes collection as documents.
 		for (prefix in prefixes) {
-			Prefixes.insert(prefix);
+			console.log(JSON.stringify(prefixes[prefix]));
+			Prefixes.insert(prefixes[prefix]);
 		}
 
 		// Show output in console.

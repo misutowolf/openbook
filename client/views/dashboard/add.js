@@ -8,7 +8,7 @@ Template.dashboardAdd.helpers({
 
 	// Generated from Prefixes (fixture) for form use.
 	prefixDropdown: function() {
-		return Prefixes.find();
+		return Prefixes.find({},{sort: {"prefix": 1}});
 	},
 
 	// Helper containing data from AWS (or cache)

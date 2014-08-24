@@ -5,10 +5,15 @@
     "npm": {},
     "accounts-ui-bootstrap-3-blaze": {},
     "bootstrap-3": {},
+    "accounts-t9n": {
+      "git": "https://github.com/misutowolf/meteor-accounts-t9n.git"
+    },
     "accounts-entry": {
       "git": "https://github.com/misutowolf/accounts-entry.git"
     },
     "font-awesome": {},
-    "collection-helpers": {}
+    "collection-helpers": {},
+    "moment": {},
+    "moment-timezone": {}
   }
 }
