@@ -91,3 +91,7 @@
 .delete-cell {
     text-align: right;
 }
+
+.fa-ban:hover {
+    color: red;
+}

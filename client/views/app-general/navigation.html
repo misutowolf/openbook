@@ -2,7 +2,7 @@
 
     <nav class="navbar navbar-default navbar-fixed-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><i class="fa fa-book"></i>&nbsp;&nbsp;OpenBook</a>
+            <a class="navbar-brand" href="{{ pathFor 'home' }}"><i class="fa fa-book"></i>&nbsp;&nbsp;OpenBook</a>
             <div class="navbar-right navbar-text">
             {{#if currentUser}}
                 Signed in as <a href="/dashboard">{{currentUser.username}}</a> | (<a href="/sign-out">Sign Out</a>)

@@ -24,3 +24,17 @@ Template.dashboard.helpers({
 	}
 
 });
+
+
+// Events
+Template.dashboard.events({
+
+	'click .fa-ban': function() {
+
+		// Check for requests, inform user if they exist.  Add this soon
+		if (confirm("Are you sure you want to remove this book?")) {
+			Meteor.call("bookDelete", this._id);
+		}
+	}
+
+})

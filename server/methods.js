@@ -96,6 +96,12 @@ Meteor.startup(function() {
 			var theAnswer = aggregateSync(pipeline);
 			return theAnswer;
 
+		},
+
+		bookDelete: function(bookId) {
+			console.log("Preparing to delete book with ID#: " + bookId);
+			Books.remove(bookId);
+			console.log("Book succesfully removed!");
 		}
 
 	});
