@@ -9,7 +9,6 @@ Meteor.startup(function() {
 	AccountsEntry.config({
 		homeRoute: '/',
 		dashboardRoute: '/dashboard',
-		profileRoute: '/profile',
 		passwordSignupFields: 'USERNAME_ONLY',
 		extraSignUpFields: [{
 			field: 'email',

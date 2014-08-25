@@ -89,11 +89,21 @@ Router.map(function() {
 	// PROFILE VIEW
 	this.route('profile', {
 		path: '/profile/:username',
-		data: function() { 
-			var userCursor = Meteor.users.findOne({username: this.params.username});
-			var bookCursor = Books.find({owner: userCursor._id});
+		waitOn: function() {
+			return this.subscribe("userByUsername", this.params.username);
+		},
+		data: function() {
+			var userDoc = Meteor.users.findOne({"username": this.params.username});
+			
+			// Guard against non-ready user document.
+			if (!userDoc) {
+				return;
+			}
+
+			// Otherwise...
+			var bookCursor = Books.find({owner: userDoc._id});
 			return {
-				theUser: userCursor,
+				theUser: userDoc,
 				theBooks: bookCursor
 			};
 		}

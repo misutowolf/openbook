@@ -95,3 +95,9 @@
 .fa-ban:hover {
     color: red;
 }
+
+.load-spin {
+    padding-top: 100px;
+    text-align: center;
+}
+}
