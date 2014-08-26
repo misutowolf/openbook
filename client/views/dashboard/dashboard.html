@@ -1,13 +1,28 @@
 <template name="dashboard">
 
 	<div class="col-lg-12">
-		<h3 class="page-header">{{ currentUser.username }}'s Dashboard</h3>
 
 		<!-- Two columns -->
 		<div class="row dash-body">
 
+			<!-- Add button, etc. -->
+			<div class="col-md-6">
+				<h4 class="center-title">{{ currentUser.username }}'s dashboard</h4>
+				<div class="well">
+					<p>
+						This dashboard is where you can maintain your books, as
+						well as requests you've made or received for books.
+
+						Click the link below to post a new book on the site!
+					</p>
+					<p class="dash-add-link">
+						<a href="{{ pathFor 'dashboard-add' }}">Post a Book!</a>
+					</p>
+				</div>
+			</div>
+
 			<!-- Listed books -->
-			<div class="col-md-8">
+			<div class="col-md-6">
 				<h4 class="center-title">Listed Books</h4>
 				<div class="well">
 					{{#if haveBooks}}
@@ -38,9 +53,25 @@
 				</div>
 			</div>
 
-			<!-- Requested books -->
-			<div class="col-md-4">
-				<h4 class="center-title">Requested Books</h4>
+		</div>
+
+		<div class="row">
+
+			<!-- My Requests -->
+			<div class="col-md-6">
+				<h4 class="center-title">My Requests</h4>
+				<div class="well">
+					{{#if haveRequests}}
+						Book table goes here
+					{{else}}
+						You have requested no books!
+					{{/if}}
+				</div>
+			</div>
+
+			<!-- Received Requests -->
+			<div class="col-md-6">
+				<h4 class="center-title">Received Requests</h4>
 				<div class="well">
 					{{#if haveRequests}}
 						Book table goes here
