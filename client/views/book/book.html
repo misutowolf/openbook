@@ -7,21 +7,25 @@
 
 			<!-- Book Info -->
 			<div class="col-lg-6">
-				<ul>
-					<li>ISBN: {{ isbn }}</li>
-					<li>Title: {{ title }}</li>
-					<li>Class: {{ class }}</li>
-					<li>Condition: {{ theCondition }}</li>
-				</ul>
+				<div class="well">
+					<ul>
+						<li>ISBN: {{ isbn }}</li>
+						<li>Title: {{ title }}</li>
+						<li>Class: {{ class }}</li>
+						<li>Condition: {{ theCondition }}</li>
+					</ul>
+				</div>
 			</div>
 
 			<!-- Owner + Availibility -->
 			<div class="col-lg-6">
-				<ul>
-					<li>Owner: {{ theOwner }}</li>
-					<li>Intention: {{ theType }}</li>
-					<li>Available: <span class="available-{{ availability }}">{{ availability }}</span></li>
-				</ul>
+				<div class="well">
+					<ul>
+						<li>Owner: {{ theOwner }}</li>
+						<li>Intention: {{ theType }}</li>
+						<li>Available: <span class="available-{{ availability }}">{{ availability }}</span></li>
+					</ul>
+				</div>
 			</div>
 
 		</div>

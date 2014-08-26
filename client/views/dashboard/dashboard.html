@@ -35,7 +35,7 @@
 							</tr>
 							{{#each theBooks}}
 								<tr>
-									<td><a href="{{ pathFor "book" }}">{{ title }}</a></td>
+									<td class="ellipsis-of"><a href="{{ pathFor "book" }}">{{ title }}</a></td>
 									<td>{{ theType }}</td>
 									<td>{{ this.getDate }}</td>
 									<td class="delete-cell">
